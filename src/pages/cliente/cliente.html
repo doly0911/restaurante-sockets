@@ -1,0 +1,66 @@
+<ion-header>
+  <h2 text-center><span>¿Qué deseas comer?</span></h2>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-label floating>Turno:</ion-label>
+  <ion-input type="number" placeholder="..."></ion-input>
+
+  <form (ngSubmit)="registrarPedido()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Pizza</ion-label>
+        <ion-select [(ngModel)]="pizza" [ngModelOptions]="{standalone: true}" multiple="true" cancelText="Nah" okText="Ok!">
+          <ion-option value="hawaiana">Hawaiana</ion-option>
+          <ion-option value="pepperoni">Pepperoni</ion-option>
+          <ion-option value="pollo">Pollo</ion-option>
+          <ion-option value="Champi">Champiñones</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tamaño</ion-label>
+        <ion-select [(ngModel)]="tam" [ngModelOptions]="{standalone: true}" multiple="true" cancelText="Nah" okText="Ok!">
+          <ion-option value="peque">Pequeño</ion-option>
+          <ion-option value="mediano">Mediano</ion-option>
+          <ion-option value="grande">Grande</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Bebidas</ion-label>
+        <ion-select [(ngModel)]="bebidas" [ngModelOptions]="{standalone: true}" multiple="true" cancelText="Nah" okText="Ok!">
+          <ion-option value="gaseosa">Gaseosa</ion-option>
+          <ion-option value="hit">Jugo hit</ion-option>
+          <ion-option value="cerveza">Cerveza</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Adiciones</ion-label>
+        <ion-select [(ngModel)]="adiciones" [ngModelOptions]="{standalone: true}" multiple="true" cancelText="Nah" okText="Ok!">
+          <ion-option value="xqueso">Extra queso</ion-option>
+          <ion-option value="piña">Piña</ion-option>
+          <ion-option value="pepperoni">Pepperoni</ion-option>
+          <ion-option value="ninguna">Ninguna</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+
+
+    <ion-item>
+      <ion-label floating>Observaciones</ion-label>
+      <ion-textarea name="observaciones"></ion-textarea>
+    </ion-item>
+
+    <button ion-button full color="primary" type="submit">
+      <ion-icon name="send" end>
+        Enviar Pedido
+      </ion-icon>
+    </button>
+
+  </form>
+
+</ion-content>
