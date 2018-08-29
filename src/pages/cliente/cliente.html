@@ -4,7 +4,7 @@
 
 <ion-content padding>
 
-  <pre>{{ order | async | json }}</pre>
+  <pre hidden>{{ order | async | json }}</pre>
 
   <ion-label floating>Turno:</ion-label>
   <form (ngSubmit)="registrarPedido()">
@@ -55,7 +55,7 @@
 
     <button ion-button full color="primary" type="submit">
       <ion-icon name="send" end>
-        Guardar Pedido
+        Enviar Pedido
       </ion-icon>
     </button>
 
