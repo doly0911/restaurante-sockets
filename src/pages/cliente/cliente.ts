@@ -1,12 +1,9 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
-import {
-  OrderProvider,
-  Order
-} from "/Users/mac/Proyectos/restaurante-sockets/src/pages/providers/order/order";
-import { Observable } from "/Users/mac/Proyectos/restaurante-sockets/node_modules/rxjs/Rx";
+import { OrderProvider, Order} from "../providers/order/order";
+import { Observable } from "../../../node_modules/rxjs/Rx";
 import { PedidoPage } from "../pedido/pedido";
-//import { FormBuilder,FormGroup, Validators } from "@angular/forms";
+
 
 @IonicPage()
 @Component({
