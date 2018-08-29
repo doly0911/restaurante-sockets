@@ -4,9 +4,9 @@
 
 <ion-content padding>
 
-  <ion-label floating>Turno:</ion-label>
-  <ion-input type="number" placeholder="..."></ion-input>
+  <pre>{{ order | async | json }}</pre>
 
+  <ion-label floating>Turno:</ion-label>
   <form (ngSubmit)="registrarPedido()">
     <ion-list>
       <ion-item>
@@ -48,16 +48,14 @@
       </ion-item>
     </ion-list>
 
-
-
     <ion-item>
       <ion-label floating>Observaciones</ion-label>
-      <ion-textarea name="observaciones"></ion-textarea>
+      <ion-textarea [(ngModel)]="observaciones" name="observaciones"></ion-textarea>
     </ion-item>
 
     <button ion-button full color="primary" type="submit">
       <ion-icon name="send" end>
-        Enviar Pedido
+        Guardar Pedido
       </ion-icon>
     </button>
 

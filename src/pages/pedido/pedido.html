@@ -1,12 +1,23 @@
 <ion-header>
 
   <ion-navbar>
-          <ion-title>Resumen del Pedido</ion-title>
+    <ion-title>Resumen del Pedido</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <h2>{{ pizza }}</h2>
+  <h2>{{ tam }}</h2>
+  <h2>{{ bebidas }}</h2>
+  <h2>{{ adiciones }}</h2>
+  <h2>{{ observaciones }}</h2>
 
 </ion-content>
+
+<button ion-button full color="primary" type="submit" (click)="nuevoPedido()">
+  <ion-icon name="send" end>
+    Enviar Pedido
+  </ion-icon>
+</button>
