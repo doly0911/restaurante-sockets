@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { ClientePage } from "../cliente/cliente";
+import { OrderProvider } from "../providers/order/order";
 
 /**
  * Generated class for the PedidoPage page.
@@ -21,7 +22,11 @@ export class PedidoPage {
   adiciones: "";
   observaciones: "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public orderService: OrderProvider
+  ) {
     this.pizza = navParams.get("pizza");
     this.tam = navParams.get("tam");
     this.bebidas = navParams.get("bebidas");
@@ -30,12 +35,12 @@ export class PedidoPage {
   }
 
   nuevoPedido() {
-    this.navCtrl.setRoot(ClientePage, {
-      pizza: this.pizza,
-      tam: this.tam,
-      bebidas: this.bebidas,
-      adiciones: this.adiciones,
-      observaciones: this.observaciones
+    this.navCtrl.push(ClientePage, {
+      pizza: null,
+      tam: null,
+      bebidas: null,
+      adiciones: null,
+      observaciones: null
     });
   }
 

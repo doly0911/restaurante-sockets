@@ -3,8 +3,9 @@ import { ErrorHandler, NgModule } from "@angular/core";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
-import { ConnectionProvider } from "/Users/mac/Proyectos/restaurante-sockets/src/pages/providers/connection/connection";
-import { OrderProvider } from "/Users/mac/Proyectos/restaurante-sockets/src/pages/providers/order/order";
+import { ConnectionProvider } from "../pages/providers/connection/connection";
+
+import { OrderProvider } from "../pages/providers/order/order";
 import { MyApp } from "./app.component";
 import { HomePage } from "../pages/home/home";
 import {

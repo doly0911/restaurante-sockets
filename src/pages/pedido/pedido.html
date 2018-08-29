@@ -8,16 +8,15 @@
 
 
 <ion-content padding>
-  <h2>{{ pizza }}</h2>
-  <h2>{{ tam }}</h2>
-  <h2>{{ bebidas }}</h2>
-  <h2>{{ adiciones }}</h2>
-  <h2>{{ observaciones }}</h2>
+  <h2>{{pizza}}</h2>
+  <!-- <h2>{{tam}}</h2>
+  <h2>{{bebidas}}</h2>
+  <h2>{{adiciones}}</h2>
+  <h2>{{observaciones}}</h2> -->
+  <button ion-button full color="primary" type="submit" (click)="nuevoPedido()">
+    <ion-icon name="send" end>
+      Nuevo Pedido
+    </ion-icon>
+  </button>
 
 </ion-content>
-
-<button ion-button full color="primary" type="submit" (click)="nuevoPedido()">
-  <ion-icon name="send" end>
-    Enviar Pedido
-  </ion-icon>
-</button>
